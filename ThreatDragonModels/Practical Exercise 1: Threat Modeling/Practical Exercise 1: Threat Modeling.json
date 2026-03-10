@@ -308,12 +308,25 @@
                   "new": false,
                   "number": 9,
                   "score": ""
+                },
+                {
+                  "id": "1026464a-1fc8-4194-962e-fcdd01b3ac4f",
+                  "title": "Fraudulent Order Repudiation",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "A customer could deny placing an order if insufficient logging and non repudiation controls are in place. ",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 45,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "spoofing": 1,
                 "tampering": 0,
-                "repudiation": 0,
+                "repudiation": 1,
                 "informationDisclosure": 0,
                 "denialOfService": 2,
                 "elevationOfPrivilege": 1
@@ -988,7 +1001,17 @@
                 "x": 380,
                 "y": 110
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           }
         ],
         "version": "2.6.0",
@@ -3561,7 +3584,7 @@
     ],
     "diagramTop": 4,
     "reviewer": "",
-    "threatTop": 44
+    "threatTop": 45
   },
   "version": "2.6.0"
 }
