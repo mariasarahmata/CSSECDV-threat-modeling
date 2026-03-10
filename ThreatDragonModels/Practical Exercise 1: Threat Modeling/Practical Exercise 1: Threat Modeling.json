@@ -3087,10 +3087,23 @@
                   "new": false,
                   "number": 37,
                   "score": ""
+                },
+                {
+                  "id": "8ba09f7b-d2a9-4c94-bd31-d0344674c1b4",
+                  "title": "Staff Account Spoofing",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "An attacker could impersonate staff to manipulate order statuses, access sales reports, or modify menu items and application configurations. ",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 42,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "tampering": 2,
                 "repudiation": 1,
                 "informationDisclosure": 0,
@@ -3235,11 +3248,50 @@
                   "new": false,
                   "number": 40,
                   "score": ""
+                },
+                {
+                  "id": "a37df1e6-8e93-4a82-9162-0ba257fe47bc",
+                  "title": "Staff Action Repudiation",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "Staff members (Barista, Manager, Administrator) could deny performing actions if audit logs are insufficient, not immutable, or can be tampered with. ",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 41,
+                  "score": ""
+                },
+                {
+                  "id": "9cc5989f-3763-463c-a511-54901b89b507",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 43,
+                  "score": ""
+                },
+                {
+                  "id": "60da8a2d-30ca-4dc5-9d2b-41c32c79cfaa",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 44,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "repudiation": 0,
+                "repudiation": 1,
                 "informationDisclosure": 0,
                 "denialOfService": 1
               }
@@ -3509,7 +3561,7 @@
     ],
     "diagramTop": 4,
     "reviewer": "",
-    "threatTop": 40
+    "threatTop": 44
   },
   "version": "2.6.0"
 }
