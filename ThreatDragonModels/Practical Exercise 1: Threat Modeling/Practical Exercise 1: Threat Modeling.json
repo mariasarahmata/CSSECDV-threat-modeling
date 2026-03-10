@@ -31,13 +31,14 @@
                 "text": "Customer"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -121,7 +122,6 @@
               ]
             },
             "id": "3dae553b-6963-401f-a72f-c97643aa75d1",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Customer",
@@ -129,9 +129,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "5433ae32-d129-42d5-b079-b7c976499f2b",
+                  "title": "Customer Account Spoofing",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "An attacker could impersonate a legitimate customer to place fraudulent orders or access their order history. ",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -148,13 +166,14 @@
                 "text": "Web App\nServer"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -238,7 +257,6 @@
               ]
             },
             "id": "8e9ab8b0-c3eb-479f-b766-6bfe2bf1c0b0",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Web App\nServer",
@@ -246,12 +264,60 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "c94e84e2-8324-44e9-9e2b-2155da4df5cd",
+                  "title": "Web Application Server Spoofing",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "An attacker might set up a fraudulent web server to phish user credentials or intercept sensitive data. ",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                },
+                {
+                  "id": "d3f304c6-9ce5-4b03-82cf-cc01cbd440fc",
+                  "title": "Web Application Server DoS",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "An attacker could flood the Web Application Server with excessive requests, making it unavailable. ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                },
+                {
+                  "id": "1c3d7aa3-39ae-4048-b227-fdc6f483c481",
+                  "title": "Customer to Staff Privilege Escalation ",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Elevation of privilege",
+                  "description": "A customer could exploit a vulnerability to gain unauthorized access to Barista, Manager, or Administrator functionalities. ",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 2,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -275,6 +341,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -358,7 +425,6 @@
               ]
             },
             "id": "58ed902c-7eff-4f6b-a275-f6fbe133713d",
-            "zIndex": 3,
             "data": {
               "type": "tm.Actor",
               "name": "Payment \nGateway",
@@ -385,16 +451,19 @@
                 "text": "MongoDB"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -478,7 +547,6 @@
               ]
             },
             "id": "4f6b2db5-aa14-4262-bb86-d92d957a70c7",
-            "zIndex": 4,
             "data": {
               "type": "tm.Store",
               "name": "MongoDB",
@@ -486,13 +554,46 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "f413586a-cdcd-43bd-b121-a1485a73a039",
+                  "title": "MongoDB Database DoS",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "Malicious or poorly optimized queries could overload the database, making it unresponsive. ",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                },
+                {
+                  "id": "83556e2e-4364-4d87-98e1-c19be6865ed4",
+                  "title": "Fraudulent Order Repudiation",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "A customer could deny placing an order if insufficient logging and non repudiation controls are in place. ",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
             }
           },
           {
@@ -515,7 +616,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "store orde",
+              "name": "store order",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -529,7 +630,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "store orde"
+              "store order"
             ],
             "id": "57dc0e7c-4fec-44bd-9b37-f3fdb2cbf35c",
             "source": {
@@ -541,58 +642,6 @@
               "port": "3983ff58-499a-4769-bd37-a8bd64db921d"
             },
             "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "order",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "order"
-            ],
-            "id": "cfcf93f2-b250-4b7f-a379-7f5a008f4507",
-            "source": {
-              "cell": "3dae553b-6963-401f-a72f-c97643aa75d1",
-              "port": "81caf439-ab03-4ee2-91b2-de9ef29cb1a9"
-            },
-            "target": {
-              "cell": "8e9ab8b0-c3eb-479f-b766-6bfe2bf1c0b0",
-              "port": "9fd56dcd-a0aa-4a97-a2ee-7c316da9bb0a"
-            },
-            "vertices": [
-              {
-                "x": 340,
-                "y": 110
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -678,87 +727,7 @@
                 "x": 270,
                 "y": 170
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           },
           {
             "shape": "trust-boundary-curve",
@@ -931,6 +900,95 @@
                 "y": 380
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "order",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "a46d6cb5-1dac-4549-9201-8641d4a65b1a",
+                  "title": "Order Data Tampering",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "An attacker could modify order details (e.g., items, quantities, prices, status) in transit or at rest. ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                {
+                  "id": "efd4065e-fe86-487a-8fd9-a8d054c261f9",
+                  "title": "Customer PII Disclosure",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Unauthorized access to customer names, contact details, delivery addresses, and order history. ",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "order"
+            ],
+            "id": "73df7fad-7498-4bfa-87a2-4a628f0dc338",
+            "source": {
+              "cell": "3dae553b-6963-401f-a72f-c97643aa75d1",
+              "port": "81caf439-ab03-4ee2-91b2-de9ef29cb1a9"
+            },
+            "target": {
+              "cell": "8e9ab8b0-c3eb-479f-b766-6bfe2bf1c0b0",
+              "port": "9fd56dcd-a0aa-4a97-a2ee-7c316da9bb0a"
+            },
+            "vertices": [
+              {
+                "x": 310,
+                "y": 110
+              },
+              {
+                "x": 380,
+                "y": 110
+              }
+            ]
           }
         ],
         "version": "2.6.0",
@@ -970,7 +1028,7 @@
     ],
     "diagramTop": 4,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 13
   },
   "version": "2.6.0"
 }
