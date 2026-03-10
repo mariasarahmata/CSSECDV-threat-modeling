@@ -2062,6 +2062,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -2145,7 +2146,6 @@
               ]
             },
             "id": "0f6df599-4b80-407a-ba65-c38082223822",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Manager",
@@ -2197,6 +2197,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -2280,7 +2281,6 @@
               ]
             },
             "id": "22cd9600-f5cd-4909-89be-3c8517776a32",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Web App \nServer",
@@ -2332,13 +2332,39 @@
                   "new": false,
                   "number": 27,
                   "score": ""
+                },
+                {
+                  "id": "d7f9d9f1-550d-4d35-88ef-2f904c50d395",
+                  "title": "Sales Data Disclosure",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Unauthorized access to sales reports or underlying aggregated sales data. ",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 49,
+                  "score": ""
+                },
+                {
+                  "id": "946a6453-4271-4237-bbc0-f188049fbd7a",
+                  "title": "Staff Account Spoofing ",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "An attacker could impersonate staff to manipulate order statuses, access sales reports, or modify menu items and application configurations. ",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 50,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
-                "spoofing": 0,
+                "spoofing": 1,
                 "tampering": 0,
                 "repudiation": 1,
-                "informationDisclosure": 0,
+                "informationDisclosure": 1,
                 "denialOfService": 1,
                 "elevationOfPrivilege": 1
               }
@@ -2370,6 +2396,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -2453,7 +2480,6 @@
               ]
             },
             "id": "e669eecc-6bca-40b2-8ccc-f0ea6f413079",
-            "zIndex": 3,
             "data": {
               "type": "tm.Store",
               "name": "MongoDB",
@@ -2480,11 +2506,24 @@
                   "new": false,
                   "number": 30,
                   "score": ""
+                },
+                {
+                  "id": "1bbf90d2-83e2-4630-b472-0ca39471d0f3",
+                  "title": "Staff Action Repudiation ",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "Staff members (Barista, Manager, Administrator) could deny performing actions if audit logs are insufficient, not immutable, or can be tampered with.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 51,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "repudiation": 0,
+                "repudiation": 1,
                 "informationDisclosure": 0,
                 "denialOfService": 1
               }
@@ -2658,11 +2697,24 @@
                   "new": false,
                   "number": 28,
                   "score": ""
+                },
+                {
+                  "id": "91d54483-a6fc-4797-9ac7-bb3ba197c8ca",
+                  "title": "Sales Report Tampering ",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Unauthorized individuals could alter sales data in the MongoDB Database, leading to falsified reports.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 52,
+                  "score": ""
                 }
               ],
               "trustBoundaryIds": [],
               "threatFrequency": {
-                "tampering": 0,
+                "tampering": 1,
                 "informationDisclosure": 1,
                 "denialOfService": 0
               }
@@ -2690,8 +2742,7 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -2712,29 +2763,15 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [
-                {
-                  "id": "0dfe07ae-f46b-43f7-acea-9c26d4e3e719",
-                  "title": "Sales Report Tampering",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Unauthorized individuals could alter sales data in the MongoDB Database, leading to falsified reports. ",
-                  "mitigation": "",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 29,
-                  "score": ""
-                }
-              ],
+              "threats": [],
               "trustBoundaryIds": [],
               "threatFrequency": {
-                "tampering": 1,
+                "tampering": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -3627,7 +3664,7 @@
     ],
     "diagramTop": 4,
     "reviewer": "",
-    "threatTop": 48
+    "threatTop": 52
   },
   "version": "2.6.0"
 }
