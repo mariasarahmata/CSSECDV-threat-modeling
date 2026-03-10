@@ -1343,10 +1343,23 @@
                   "new": false,
                   "number": 23,
                   "score": ""
+                },
+                {
+                  "id": "1aed1e36-4ef0-4668-a220-f603f8ebe2ab",
+                  "title": "Staff Account Spoofing ",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "An attacker could impersonate staff to manipulate order statuses, access sales reports, or modify menu items and application configurations. ",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 48,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
-                "spoofing": 0,
+                "spoofing": 1,
                 "tampering": 0,
                 "repudiation": 1,
                 "informationDisclosure": 0,
@@ -1580,6 +1593,10 @@
               "port": "7e9508c0-2a1a-46bc-8f03-98320cbeb562"
             },
             "vertices": [
+              {
+                "x": 350,
+                "y": 280
+              },
               {
                 "x": 390,
                 "y": 280
@@ -1888,14 +1905,18 @@
               "cell": "c212ec2f-0829-4b78-b4a2-82f6a5361fe2",
               "port": "37eda5c9-8005-4201-9bb5-b1f77edc288c"
             },
-            "vertices": [
-              {
-                "x": 290,
-                "y": 220
-              }
-            ],
             "tools": {
               "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
                 "boundary",
                 "button-remove",
                 "vertices",
@@ -1968,7 +1989,13 @@
                 "target-arrowhead"
               ],
               "name": null
-            }
+            },
+            "vertices": [
+              {
+                "x": 290,
+                "y": 220
+              }
+            ]
           },
           {
             "shape": "trust-boundary-curve",
@@ -1988,15 +2015,21 @@
             "labels": [
               "Trust Boundary"
             ],
-            "id": "ef7318d2-d05c-4b29-9de2-45c0a4d1e82a",
+            "id": "88f6b715-578a-43c6-9acd-1e2c5b558d25",
             "source": {
-              "x": 460,
-              "y": 414
+              "x": 470,
+              "y": 400
             },
             "target": {
-              "x": 560,
-              "y": 514
-            }
+              "x": 820,
+              "y": 400
+            },
+            "vertices": [
+              {
+                "x": 630,
+                "y": 440
+              }
+            ]
           }
         ]
       },
@@ -3594,7 +3627,7 @@
     ],
     "diagramTop": 4,
     "reviewer": "",
-    "threatTop": 47
+    "threatTop": 48
   },
   "version": "2.6.0"
 }
