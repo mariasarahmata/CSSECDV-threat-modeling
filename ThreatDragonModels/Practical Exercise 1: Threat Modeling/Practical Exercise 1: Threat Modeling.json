@@ -321,10 +321,23 @@
                   "new": false,
                   "number": 45,
                   "score": ""
+                },
+                {
+                  "id": "fe7c8f80-fe9f-405d-a0c7-7b6dc841c997",
+                  "title": "Customer Account Spoofing ",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "An attacker could impersonate a legitimate customer to place fraudulent orders or access their order history.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 46,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "tampering": 0,
                 "repudiation": 1,
                 "informationDisclosure": 0,
@@ -607,6 +620,13 @@
                 "informationDisclosure": 0,
                 "denialOfService": 1
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1001,17 +1021,7 @@
                 "x": 380,
                 "y": 110
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           }
         ],
         "version": "2.6.0",
@@ -3584,7 +3594,7 @@
     ],
     "diagramTop": 4,
     "reviewer": "",
-    "threatTop": 45
+    "threatTop": 47
   },
   "version": "2.6.0"
 }
