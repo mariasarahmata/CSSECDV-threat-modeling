@@ -1855,9 +1855,44 @@
               "cell": "c212ec2f-0829-4b78-b4a2-82f6a5361fe2",
               "port": "37eda5c9-8005-4201-9bb5-b1f77edc288c"
             },
-            "vertices": [],
+            "vertices": [
+              {
+                "x": 290,
+                "y": 220
+              }
+            ],
             "tools": {
               "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
                 "boundary",
                 "button-remove",
                 "vertices",
@@ -1900,6 +1935,34 @@
                 "target-arrowhead"
               ],
               "name": null
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Trust Boundary"
+            ],
+            "id": "ef7318d2-d05c-4b29-9de2-45c0a4d1e82a",
+            "source": {
+              "x": 460,
+              "y": 414
+            },
+            "target": {
+              "x": 560,
+              "y": 514
             }
           }
         ]
